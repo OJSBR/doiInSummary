@@ -17,6 +17,7 @@ journal home page.
 | OJS version | Branch | Plugin release |
 |-------------|--------|----------------|
 | OJS 3.5.x   | [`stable-3_5_0`](../../tree/stable-3_5_0) *(default)* | 3.5.0.1 |
+| OJS 3.4.x   | [`stable-3_4_0`](../../tree/stable-3_4_0) | 3.4.0.1 |
 
 ## Installation
 
@@ -33,7 +34,7 @@ journal home page.
 
 ## Credits & authorship
 
-- **Maintained by** [OJSBR](https://ojsbr.com.br) — adaptation to OJS 3.5.
+- **Maintained by** [OJSBR](https://ojsbr.com.br) — adaptation to OJS 3.4/3.5.
 - **Original work:** `doiInSummary` by **Lepidus Tecnologia**
   (<https://github.com/lepidus/doiInSummary>), © Lepidus Tecnologia 2015–2023.
 - Distributed under the **GNU GPL v3**, consistent with the original licensing.
@@ -66,7 +67,7 @@ pasta em `plugins/generic/` (ficando `plugins/generic/doiInSummary/`). Depois at
 
 ### Créditos e autoria
 
-- **Mantido pela** [OJSBR](https://ojsbr.com.br) — adaptação para OJS 3.5.
+- **Mantido pela** [OJSBR](https://ojsbr.com.br) — adaptação para OJS 3.4/3.5.
 - **Trabalho original:** `doiInSummary` da **Lepidus Tecnologia**
   (<https://github.com/lepidus/doiInSummary>), © Lepidus Tecnologia 2015–2023.
 - Distribuído sob a **GNU GPL v3**, coerente com o licenciamento original.
