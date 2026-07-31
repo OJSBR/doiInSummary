@@ -13,8 +13,8 @@
 <version>
     <application>doiInSummary</application>
     <type>plugins.generic</type>
-    <release>3.4.0.1</release>
-    <date>2026-07-02</date>
+    <release>3.4.0.2</release>
+    <date>2026-07-30</date>
     <lazy-load>1</lazy-load>
     <class>DoiInSummaryPlugin</class>
 </version>

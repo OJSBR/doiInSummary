@@ -1,0 +1,17 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt\n"
+
+
+msgid "plugins.generic.doiInSummary.displayName"
+msgstr "DOI no sumário"
+
+msgid "plugins.generic.doiInSummary.description"
+msgstr "Apresenta o DOI dos artigos no sumário das edições e na página inicial."
