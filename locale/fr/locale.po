@@ -9,11 +9,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2026-07-16T00:00:00+00:00\n"
 "PO-Revision-Date: 2026-07-16T00:00:00+00:00\n"
-"Language: it\n"
+"Language: fr\n"
 
 
 msgid "plugins.generic.doiInSummary.displayName"
-msgstr "DOI nel sommario"
+msgstr "DOI dans le sommaire"
 
 msgid "plugins.generic.doiInSummary.description"
-msgstr "Mostra il DOI degli articoli nel sommario dei fascicoli e nella home page."
+msgstr "Affiche le DOI des articles dans le sommaire des numéros et sur la page d'accueil."

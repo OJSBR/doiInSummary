@@ -1,10 +1,10 @@
 # DOI in Summary — OJS plugin
 
 [![OJS](https://img.shields.io/badge/OJS-3.5-brightgreen)](https://pkp.sfu.ca/ojs/)
-[![Version](https://img.shields.io/badge/version-3.5.0.1-blue)](version.xml)
+[![Version](https://img.shields.io/badge/version-3.5.0.4-blue)](version.xml)
 [![License](https://img.shields.io/badge/license-GPL--3.0-lightgrey)](LICENSE)
 
-**⬇️ Install package:** [OJS 3.5](https://github.com/OJSBR/doiInSummary/releases/download/3.5.0.3/doiInSummary-3.5.0.3.tar.gz) · [OJS 3.4](https://github.com/OJSBR/doiInSummary/releases/download/3.4.0.2/doiInSummary-3.4.0.2.tar.gz) — or browse all [Releases](../../releases).
+**⬇️ Install package:** [OJS 3.5](https://github.com/OJSBR/doiInSummary/releases/download/3.5.0.4/doiInSummary-3.5.0.4.tar.gz) · [OJS 3.4](https://github.com/OJSBR/doiInSummary/releases/download/3.4.0.2/doiInSummary-3.4.0.2.tar.gz) — or browse all [Releases](../../releases).
 
 A generic plugin for **Open Journal Systems (OJS)** that shows each article's **DOI URL** in
 the issue table of contents / article summary, including the current-issue block on the
@@ -18,7 +18,7 @@ journal home page.
 
 | OJS version | Branch | Plugin release |
 |-------------|--------|----------------|
-| OJS 3.5.x   | [`stable-3_5_0`](../../tree/stable-3_5_0) *(default)* | 3.5.0.1 |
+| OJS 3.5.x   | [`stable-3_5_0`](../../tree/stable-3_5_0) *(default)* | 3.5.0.4 |
 | OJS 3.4.x   | [`stable-3_4_0`](../../tree/stable-3_4_0) | 3.4.0.1 |
 
 ## Installation

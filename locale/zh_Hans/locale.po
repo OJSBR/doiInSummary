@@ -1,0 +1,17 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: zh_Hans\n"
+
+
+#, fuzzy
+msgid "plugins.generic.doiInSummary.displayName"
+msgstr "目录中的 DOI"
+
+#, fuzzy
+msgid "plugins.generic.doiInSummary.description"
+msgstr "在各期目录和首页中显示文章的 DOI。"

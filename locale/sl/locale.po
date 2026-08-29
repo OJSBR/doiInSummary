@@ -1,0 +1,17 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: sl\n"
+
+
+#, fuzzy
+msgid "plugins.generic.doiInSummary.displayName"
+msgstr "DOI v pregledu"
+
+#, fuzzy
+msgid "plugins.generic.doiInSummary.description"
+msgstr "Prikaže DOI člankov v pregledu številk in na domači strani."

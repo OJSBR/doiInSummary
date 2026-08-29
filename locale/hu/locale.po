@@ -1,0 +1,17 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: OJSBR\n"
+"Language-Team: OJSBR\n"
+"Language: hu\n"
+
+
+#, fuzzy
+msgid "plugins.generic.doiInSummary.displayName"
+msgstr "DOI az összefoglalóban"
+
+#, fuzzy
+msgid "plugins.generic.doiInSummary.description"
+msgstr "Megjeleníti a cikkek DOI-ját a lapszámok összefoglalójában és a kezdőlapon."
