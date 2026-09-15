@@ -5,11 +5,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Last-Translator: OJSBR\n"
 "Language-Team: OJSBR\n"
-"Language: en\n"
+"Language: vi\n"
 
 
+#, fuzzy
 msgid "plugins.generic.doiInSummary.displayName"
-msgstr "DOI in summary"
+msgstr "DOI trong mục lục"
 
+#, fuzzy
 msgid "plugins.generic.doiInSummary.description"
-msgstr "Shows the DOI of the articles in the summary of issues and in the home page."
+msgstr "Hiển thị DOI của các bài báo trong mục lục số tạp chí và trên trang chủ."

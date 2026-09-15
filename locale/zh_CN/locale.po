@@ -5,11 +5,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Last-Translator: OJSBR\n"
 "Language-Team: OJSBR\n"
-"Language: en\n"
+"Language: zh_CN\n"
 
 
+#, fuzzy
 msgid "plugins.generic.doiInSummary.displayName"
-msgstr "DOI in summary"
+msgstr "目录中的 DOI"
 
+#, fuzzy
 msgid "plugins.generic.doiInSummary.description"
-msgstr "Shows the DOI of the articles in the summary of issues and in the home page."
+msgstr "在各期目录和首页中显示文章的 DOI。"

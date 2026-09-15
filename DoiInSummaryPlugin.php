@@ -4,10 +4,13 @@
  * @file plugins/generic/doiInSummary/DoiInSummaryPlugin.php
  *
  * Copyright (c) 2015-2023 Lepidus Tecnologia
- * Adapted for OJS 3.4 by OJSBR/STNT Tecnologia da Informação LTDA.
+ * Copyright (c) 2026 OJSBR (https://ojsbr.com)
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * Distributed under the GNU GPL v3. For full terms see LICENSE or
- * https://www.gnu.org/licenses/gpl-3.0.txt.
+ * @class DoiInSummaryPlugin
+ *
+ * @brief Shows the DOI of each article in the issue table of contents and in the
+ *        current issue on the journal home page.
  */
 
 namespace APP\plugins\generic\doiInSummary;
@@ -33,9 +36,8 @@ class DoiInSummaryPlugin extends GenericPlugin
 
         if ($this->getEnabled($mainContextId)) {
             $this->addLocaleData();
-            // OJS 3.4: array callable (avoids PHP 8.1 first-class callable syntax).
             Hook::add('Templates::Issue::Issue::Article', [$this, 'addDoiToArticleSummary']);
-            $this->addDoiStyleSheet();
+            $this->addDoiAssets();
         }
 
         return $success;
@@ -94,7 +96,6 @@ class DoiInSummaryPlugin extends GenericPlugin
         $articleId = method_exists($article, 'getId') ? (int) $article->getId() : 0;
 
         $templateMgr->assign([
-            'doiUrl' => $doiUrl,
             'doiInSummaryArticleId' => $articleId,
             'doiInSummaryUrl' => $doiUrl,
         ]);
@@ -107,7 +108,7 @@ class DoiInSummaryPlugin extends GenericPlugin
     /**
      * Get the resolving DOI URL from the current publication.
      */
-    private function getArticleDoiUrl(object $article): ?string
+    public function getArticleDoiUrl(object $article): ?string
     {
         if (!method_exists($article, 'getCurrentPublication')) {
             return null;
@@ -132,28 +133,37 @@ class DoiInSummaryPlugin extends GenericPlugin
             $doi = $publication->getData('doi') ?: $publication->getData('pub-id::doi');
         }
 
-        if (!is_string($doi) || trim($doi) === '') {
+        return is_string($doi) ? self::resolvingUrl($doi) : null;
+    }
+
+    /**
+     * The resolving URL of a DOI given as a URL, as "doi:..." or bare.
+     */
+    public static function resolvingUrl(string $doi): ?string
+    {
+        $doi = trim($doi);
+        if ($doi === '') {
             return null;
         }
-
-        $doi = trim($doi);
         if (preg_match('/^https?:\/\//i', $doi)) {
             return $doi;
         }
 
-        return 'https://doi.org/' . ltrim($doi, '/');
+        return 'https://doi.org/' . ltrim(preg_replace('/^doi:\s*/i', '', $doi), '/');
     }
 
     /**
-     * Register the plugin stylesheet on frontend requests.
+     * Register the stylesheet and the script on reader pages. The script, loaded
+     * once per page, moves every DOI right under the title of its article.
      */
-    private function addDoiStyleSheet(): void
+    private function addDoiAssets(): void
     {
         $request = Application::get()->getRequest();
         $templateMgr = TemplateManager::getManager($request);
-        $url = $request->getBaseUrl() . '/' . $this->getPluginPath() . '/styles/doi.css';
+        $baseUrl = $request->getBaseUrl() . '/' . $this->getPluginPath();
 
-        $templateMgr->addStyleSheet('doiInSummaryCSS', $url);
+        $templateMgr->addStyleSheet('doiInSummaryCSS', $baseUrl . '/styles/doi.css', ['contexts' => 'frontend']);
+        $templateMgr->addJavaScript('doiInSummaryJS', $baseUrl . '/js/doiInSummary.js', ['contexts' => 'frontend']);
     }
 }
 

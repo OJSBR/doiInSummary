@@ -5,11 +5,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Last-Translator: OJSBR\n"
 "Language-Team: OJSBR\n"
-"Language: en\n"
+"Language: cs\n"
 
 
+#, fuzzy
 msgid "plugins.generic.doiInSummary.displayName"
-msgstr "DOI in summary"
+msgstr "DOI v přehledu"
 
+#, fuzzy
 msgid "plugins.generic.doiInSummary.description"
-msgstr "Shows the DOI of the articles in the summary of issues and in the home page."
+msgstr "Zobrazuje DOI článků v přehledu čísel a na domovské stránce."
