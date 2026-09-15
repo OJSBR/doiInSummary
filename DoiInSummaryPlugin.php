@@ -24,21 +24,22 @@ use PKP\plugins\Hook;
 class DoiInSummaryPlugin extends GenericPlugin
 {
     /**
-     * Register the plugin.
+     * Register the plugin and, where it is enabled, its hooks.
+     *
+     * @param string $category
+     * @param string $path
+     * @param null|int $mainContextId
      */
     public function register($category, $path, $mainContextId = null): bool
     {
         $success = parent::register($category, $path, $mainContextId);
-
-        if (!$success || Application::isUnderMaintenance()) {
+        // Only reader-facing pages of a journal reach these hooks.
+        if (!$success || Application::isUnderMaintenance() || !$this->getEnabled($mainContextId)) {
             return $success;
         }
 
-        if ($this->getEnabled($mainContextId)) {
-            $this->addLocaleData();
-            Hook::add('Templates::Issue::Issue::Article', [$this, 'addDoiToArticleSummary']);
-            $this->addDoiAssets();
-        }
+        Hook::add('Templates::Issue::Issue::Article', $this->addDoiToArticleSummary(...));
+        Hook::add('TemplateManager::display', $this->addDoiAssets(...));
 
         return $success;
     }
@@ -67,7 +68,7 @@ class DoiInSummaryPlugin extends GenericPlugin
      * In OJS 3.5 args[1] can be Smarty_Internal_Template instead of APP\template\TemplateManager,
      * so this callback intentionally avoids a strict TemplateManager type check.
      */
-    public function addDoiToArticleSummary(string $hookName, array $args): bool
+    public function addDoiToArticleSummary($hookName, $args): bool
     {
         if (!isset($args[1]) || !array_key_exists(2, $args) || !is_object($args[1])) {
             return Hook::CONTINUE;
@@ -153,17 +154,29 @@ class DoiInSummaryPlugin extends GenericPlugin
     }
 
     /**
-     * Register the stylesheet and the script on reader pages. The script, loaded
-     * once per page, moves every DOI right under the title of its article.
+     * Add the stylesheet and the script to reader pages.
+     * The script, loaded once per page, moves every DOI right under the title of
+     * its article.
+     *
+     * @param string $hookName
+     * @param array $args [$templateMgr, $template, $sendContentType, $charset, $output]
      */
-    private function addDoiAssets(): void
+    public function addDoiAssets($hookName, $args): bool
     {
+        // Summaries appear in the table of contents, on the home page, in search results and in
+        // pages of themes; the files are small and only reader pages load them.
+        if (!str_starts_with((string) ($args[1] ?? ''), 'frontend/')) {
+            return Hook::CONTINUE;
+        }
+
         $request = Application::get()->getRequest();
-        $templateMgr = TemplateManager::getManager($request);
+        $templateMgr = $args[0];
         $baseUrl = $request->getBaseUrl() . '/' . $this->getPluginPath();
 
         $templateMgr->addStyleSheet('doiInSummaryCSS', $baseUrl . '/styles/doi.css', ['contexts' => 'frontend']);
         $templateMgr->addJavaScript('doiInSummaryJS', $baseUrl . '/js/doiInSummary.js', ['contexts' => 'frontend']);
+
+        return Hook::CONTINUE;
     }
 }
 
