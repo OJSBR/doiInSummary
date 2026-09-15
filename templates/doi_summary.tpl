@@ -1,3 +1,12 @@
+{**
+ * plugins/generic/doiInSummary/templates/doi_summary.tpl
+ *
+ * Copyright (c) 2015-2023 Lepidus Tecnologia
+ * Copyright (c) 2026 OJSBR (https://ojsbr.com)
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+ *
+ * The DOI of an article in a summary. js/doiInSummary.js moves it under the title.
+ *}
 <div id="doi_article-{$doiInSummaryArticleId|escape}" class="doiInSummary" data-doi-in-summary="{$doiInSummaryArticleId|escape}">
     <strong>
         {capture assign=translatedDOI}{translate key="doi.readerDisplayName"}{/capture}
@@ -7,19 +16,3 @@
         {$doiInSummaryUrl|escape}
     </a>
 </div>
-
-<script>
-(function () {ldelim}
-    var doiDiv = document.getElementById('doi_article-{$doiInSummaryArticleId|escape:javascript}');
-    if (!doiDiv || !doiDiv.parentNode) {ldelim}
-        return;
-    {rdelim}
-
-    var articleSummary = doiDiv.closest('.obj_article_summary') || doiDiv.parentNode;
-    var title = articleSummary.querySelector('.title, .article__title, h2, h3, h4');
-
-    if (title && title.parentNode) {ldelim}
-        title.parentNode.insertBefore(doiDiv, title.nextSibling);
-    {rdelim}
-{rdelim}());
-</script>
