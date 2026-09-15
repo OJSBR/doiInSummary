@@ -14,8 +14,11 @@
 namespace APP\plugins\generic\doiInSummary\tests;
 
 use APP\plugins\generic\doiInSummary\DoiInSummaryPlugin;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PKP\tests\PKPTestCase;
 
-class DoiInSummaryTest extends TestCase
+#[CoversClass(DoiInSummaryPlugin::class)]
+class DoiInSummaryTest extends PKPTestCase
 {
     public function testEveryFormOfADoiBecomesItsResolvingUrl(): void
     {
@@ -59,5 +62,29 @@ class DoiInSummaryTest extends TestCase
         };
 
         $this->assertSame('https://doi.org/10.5555/xyz', (new DoiInSummaryPlugin())->getArticleDoiUrl($article));
+    }
+
+    public function testTheAssetsAreOnlyAddedToReaderPages(): void
+    {
+        $templateMgr = new class () {
+            public array $added = [];
+
+            public function addStyleSheet($name, $url, $args = [])
+            {
+                $this->added[] = $name;
+            }
+
+            public function addJavaScript($name, $url, $args = [])
+            {
+                $this->added[] = $name;
+            }
+        };
+        $plugin = new DoiInSummaryPlugin();
+
+        $plugin->addDoiAssets('TemplateManager::display', [$templateMgr, 'management/settings/website.tpl']);
+        $this->assertSame([], $templateMgr->added, 'Nothing on editorial pages.');
+
+        $plugin->addDoiAssets('TemplateManager::display', [$templateMgr, 'frontend/pages/issue.tpl']);
+        $this->assertSame(['doiInSummaryCSS', 'doiInSummaryJS'], $templateMgr->added);
     }
 }

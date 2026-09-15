@@ -1,10 +1,10 @@
 # DOI in Summary — OJS plugin
 
 [![OJS](https://img.shields.io/badge/OJS-3.4%20%7C%203.5-brightgreen)](https://pkp.sfu.ca/ojs/)
-[![Version](https://img.shields.io/badge/version-3.5.0.5-blue)](version.xml)
+[![Version](https://img.shields.io/badge/version-3.5.0.6-blue)](version.xml)
 [![License](https://img.shields.io/badge/license-GPL--3.0-lightgrey)](LICENSE)
 
-**⬇️ Install package:** [OJS 3.5](https://github.com/OJSBR/doiInSummary/releases/download/3.5.0.5/doiInSummary-3.5.0.5.tar.gz) · [OJS 3.4](https://github.com/OJSBR/doiInSummary/releases/download/3.4.0.3/doiInSummary-3.4.0.3.tar.gz) — or browse all [Releases](../../releases).
+**⬇️ Install package:** [OJS 3.5](https://github.com/OJSBR/doiInSummary/releases/download/3.5.0.6/doiInSummary-3.5.0.6.tar.gz) · [OJS 3.4](https://github.com/OJSBR/doiInSummary/releases/download/3.4.0.4/doiInSummary-3.4.0.4.tar.gz) — or browse all [Releases](../../releases).
 
 > **This is the `stable-3_4_0` branch (OJS 3.4).** For OJS 3.5 use the
 > [`stable-3_5_0`](../../tree/stable-3_5_0) branch.
@@ -21,8 +21,8 @@ journal home page.
 
 | OJS version | Branch | Plugin release |
 |-------------|--------|----------------|
-| OJS 3.5.x   | [`stable-3_5_0`](../../tree/stable-3_5_0) *(default)* | 3.5.0.5 |
-| OJS 3.4.x   | [`stable-3_4_0`](../../tree/stable-3_4_0) | 3.4.0.3 |
+| OJS 3.5.x   | [`stable-3_5_0`](../../tree/stable-3_5_0) *(default)* | 3.5.0.6 |
+| OJS 3.4.x   | [`stable-3_4_0`](../../tree/stable-3_4_0) | 3.4.0.4 |
 
 Both branches ship the same code; the locale folders follow each OJS line (38 languages).
 
@@ -44,18 +44,23 @@ Both branches ship the same code; the locale folders follow each OJS line (38 la
 
 ## Tests
 
-- **PHP suite** (`tests/`, 18 tests): the class against the installed PKP, the resolving URL
-  of every DOI form, the DOI read from the current publication, the summary markup without
-  inline script, and the 38 translations. Run either way from the OJS root:
+- **PHPUnit** (`tests/*Test.php`, on `PKP\tests\PKPTestCase`): the class against the installed PKP,
+  the plugin found by PKP's plugin registry, the resolving URL of every DOI form, the DOI read from
+  the current publication, the summary markup without inline script, the assets added to reader
+  pages only, and the 38 translations. From the OJS root:
 
   ```bash
-  php plugins/generic/doiInSummary/tests/run.php
   lib/pkp/lib/vendor/bin/phpunit --configuration lib/pkp/tests/phpunit.xml --no-coverage "$PWD/plugins/generic/doiInSummary/tests"
   ```
 
-- **Cypress** (`cypress/tests/functional/DoiInSummary.cy.js`): a published issue shows each DOI
-  once, as a resolving link, right under the title, with the script loaded once. No login.
+- **Cypress** (`cypress/tests/functional/DoiInSummary.cy.js`, run by
+  [pkp-github-actions](https://github.com/pkp/pkp-github-actions) on every push): enables the
+  plugin. With `withDois=1` and an issue whose articles have DOIs it also checks that each DOI
+  appears once, as a resolving link, right under the title, with the script loaded once (it fails
+  with the hook off).
 - Verified on OJS 3.5.0.3 and 3.4.0.10.
+
+Tests are kept in the repository and are not part of the release package.
 
 ## Credits & authorship
 
@@ -63,6 +68,12 @@ Both branches ship the same code; the locale folders follow each OJS line (38 la
 - **Original work:** `doiInSummary` by **Lepidus Tecnologia**
   (<https://github.com/lepidus/doiInSummary>), © Lepidus Tecnologia 2015–2023.
 - Distributed under the **GNU GPL v3**, consistent with the original licensing.
+
+## AI use
+
+Generative AI (Claude, by Anthropic) was used to write and run tests, improve the code and bring
+it in line with PKP standards. Every change is reviewed and tested by OJSBR, which is responsible
+for the published releases.
 
 ## Contributing
 
@@ -97,14 +108,20 @@ Depois ative o **DOI in summary** na lista de plugins *Genéricos*.
 
 | Versão do OJS | Branch | Release do plugin |
 |---------------|--------|-------------------|
-| OJS 3.5.x     | [`stable-3_5_0`](../../tree/stable-3_5_0) *(padrão)* | 3.5.0.5 |
-| OJS 3.4.x     | [`stable-3_4_0`](../../tree/stable-3_4_0) | 3.4.0.3 |
+| OJS 3.5.x     | [`stable-3_5_0`](../../tree/stable-3_5_0) *(padrão)* | 3.5.0.6 |
+| OJS 3.4.x     | [`stable-3_4_0`](../../tree/stable-3_4_0) | 3.4.0.4 |
 
 ### Testes
 
-Suíte PHP em `tests/` (18 testes, pelo `tests/run.php` ou pelo PHPUnit do PKP) e Cypress em
-`cypress/tests/functional/` (sumário de uma edição publicada, sem login). Um único script por
-página posiciona o DOI logo abaixo do título de cada artigo. Verificado no OJS 3.5.0.3 e 3.4.0.10.
+PHPUnit em `tests/` (sobre `PKP\tests\PKPTestCase`) e Cypress em `cypress/tests/functional/`
+(rodado pelo [pkp-github-actions](https://github.com/pkp/pkp-github-actions) a cada push), com os
+comandos da seção em inglês. A suíte cobre a classe contra o PKP instalado, o plugin encontrado pelo
+registro de plugins, a URL de resolução de cada forma de DOI, o DOI lido da publicação atual, o
+resumo sem script inline, os arquivos só nas páginas do leitor e as 38 traduções; o Cypress, com
+DOIs, confere cada DOI uma vez, como link, logo abaixo do título. Verificado no OJS 3.5.0.3 e
+3.4.0.10.
+
+Os testes ficam no repositório e não fazem parte do pacote da release.
 
 ### Créditos e autoria
 
@@ -112,6 +129,12 @@ página posiciona o DOI logo abaixo do título de cada artigo. Verificado no OJS
 - **Trabalho original:** `doiInSummary` da **Lepidus Tecnologia**
   (<https://github.com/lepidus/doiInSummary>), © Lepidus Tecnologia 2015–2023.
 - Distribuído sob a **GNU GPL v3**, coerente com o licenciamento original.
+
+### Uso de IA
+
+Foi usada IA generativa (Claude, da Anthropic) para escrever e rodar testes, melhorar o código e
+alinhá-lo aos padrões da PKP. Toda mudança é revisada e testada pela OJSBR, que responde pelas
+releases publicadas.
 
 ### Licença
 
