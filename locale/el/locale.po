@@ -15,3 +15,11 @@ msgstr "DOI στη σύνοψη"
 #, fuzzy
 msgid "plugins.generic.doiInSummary.description"
 msgstr "Εμφανίζει το DOI των άρθρων στη σύνοψη των τευχών και στην αρχική σελίδα."
+
+#, fuzzy
+msgid "plugins.generic.doiInSummary.description.ops"
+msgstr "Εμφανίζει το DOI κάθε προδημοσίευσης στις λίστες προδημοσιεύσεων, όπως η αρχική σελίδα του διακομιστή και οι σελίδες των ενοτήτων."
+
+#, fuzzy
+msgid "plugins.generic.doiInSummary.description.omp"
+msgstr "Εμφανίζει το DOI κάθε βιβλίου στις λίστες βιβλίων, όπως ο κατάλογος, η αρχική σελίδα του εκδότη και τα αποτελέσματα αναζήτησης."

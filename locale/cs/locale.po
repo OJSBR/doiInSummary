@@ -15,3 +15,11 @@ msgstr "DOI v přehledu"
 #, fuzzy
 msgid "plugins.generic.doiInSummary.description"
 msgstr "Zobrazuje DOI článků v přehledu čísel a na domovské stránce."
+
+#, fuzzy
+msgid "plugins.generic.doiInSummary.description.ops"
+msgstr "Zobrazuje DOI každého preprintu v seznamech preprintů, například na domovské stránce serveru a na stránkách sekcí."
+
+#, fuzzy
+msgid "plugins.generic.doiInSummary.description.omp"
+msgstr "Zobrazuje DOI každé knihy v seznamech knih, například v katalogu, na domovské stránce nakladatelství a ve výsledcích vyhledávání."

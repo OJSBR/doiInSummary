@@ -15,3 +15,11 @@ msgstr "DOI w spisie treści"
 #, fuzzy
 msgid "plugins.generic.doiInSummary.description"
 msgstr "Wyświetla DOI artykułów w spisie treści numerów oraz na stronie głównej."
+
+#, fuzzy
+msgid "plugins.generic.doiInSummary.description.ops"
+msgstr "Wyświetla DOI każdego preprintu na listach preprintów, takich jak strona główna serwera i strony działów."
+
+#, fuzzy
+msgid "plugins.generic.doiInSummary.description.omp"
+msgstr "Wyświetla DOI każdej książki na listach książek, takich jak katalog, strona główna wydawnictwa i wyniki wyszukiwania."

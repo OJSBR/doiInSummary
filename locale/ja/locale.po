@@ -15,3 +15,11 @@ msgstr "目次中のDOI"
 #, fuzzy
 msgid "plugins.generic.doiInSummary.description"
 msgstr "号の目次とホームページに論文のDOIを表示します。"
+
+#, fuzzy
+msgid "plugins.generic.doiInSummary.description.ops"
+msgstr "サーバーのトップページやセクションのページなど、プレプリントの一覧に各プレプリントのDOIを表示します。"
+
+#, fuzzy
+msgid "plugins.generic.doiInSummary.description.omp"
+msgstr "カタログ、出版社のトップページ、検索結果など、書籍の一覧に各書籍のDOIを表示します。"

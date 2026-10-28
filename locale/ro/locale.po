@@ -15,3 +15,11 @@ msgstr "DOI în sumar"
 #, fuzzy
 msgid "plugins.generic.doiInSummary.description"
 msgstr "Afișează DOI-ul articolelor în sumarul numerelor și pe pagina principală."
+
+#, fuzzy
+msgid "plugins.generic.doiInSummary.description.ops"
+msgstr "Afișează DOI-ul fiecărui preprint în listele de preprinturi, cum ar fi pagina principală a serverului și paginile secțiunilor."
+
+#, fuzzy
+msgid "plugins.generic.doiInSummary.description.omp"
+msgstr "Afișează DOI-ul fiecărei cărți în listele de cărți, cum ar fi catalogul, pagina principală a editurii și rezultatele căutării."

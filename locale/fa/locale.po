@@ -15,3 +15,11 @@ msgstr "شناسهٔ DOI در فهرست"
 #, fuzzy
 msgid "plugins.generic.doiInSummary.description"
 msgstr "شناسهٔ DOI مقاله‌ها را در فهرست شماره‌ها و در صفحهٔ اصلی نمایش می‌دهد."
+
+#, fuzzy
+msgid "plugins.generic.doiInSummary.description.ops"
+msgstr "شناسهٔ DOI هر پیش‌چاپ را در فهرست‌های پیش‌چاپ‌ها، مانند صفحهٔ اصلی سرور و صفحه‌های بخش‌ها، نمایش می‌دهد."
+
+#, fuzzy
+msgid "plugins.generic.doiInSummary.description.omp"
+msgstr "شناسهٔ DOI هر کتاب را در فهرست‌های کتاب‌ها، مانند کاتالوگ، صفحهٔ اصلی ناشر و نتایج جست‌وجو، نمایش می‌دهد."

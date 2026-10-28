@@ -15,3 +15,11 @@ msgstr "DOI trong mục lục"
 #, fuzzy
 msgid "plugins.generic.doiInSummary.description"
 msgstr "Hiển thị DOI của các bài báo trong mục lục số tạp chí và trên trang chủ."
+
+#, fuzzy
+msgid "plugins.generic.doiInSummary.description.ops"
+msgstr "Hiển thị DOI của từng bản tiền ấn phẩm trong danh sách bản tiền ấn phẩm, chẳng hạn trang chủ của máy chủ và các trang chuyên mục."
+
+#, fuzzy
+msgid "plugins.generic.doiInSummary.description.omp"
+msgstr "Hiển thị DOI của từng cuốn sách trong danh sách sách, chẳng hạn danh mục, trang chủ của nhà xuất bản và kết quả tìm kiếm."

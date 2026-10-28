@@ -13,3 +13,9 @@ msgstr "DOI in het overzicht"
 
 msgid "plugins.generic.doiInSummary.description"
 msgstr "Toont de DOI van de artikelen in het overzicht van nummers en op de homepage."
+
+msgid "plugins.generic.doiInSummary.description.ops"
+msgstr "Toont de DOI van elke preprint in de lijsten met preprints, zoals de startpagina van de server en de pagina's van de secties."
+
+msgid "plugins.generic.doiInSummary.description.omp"
+msgstr "Toont de DOI van elk boek in de lijsten met boeken, zoals de catalogus, de startpagina van de uitgeverij en de zoekresultaten."

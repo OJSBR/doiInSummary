@@ -15,3 +15,11 @@ msgstr "DOI u pregledu"
 #, fuzzy
 msgid "plugins.generic.doiInSummary.description"
 msgstr "Prikazuje DOI članaka u pregledu brojeva i na početnoj stranici."
+
+#, fuzzy
+msgid "plugins.generic.doiInSummary.description.ops"
+msgstr "Prikazuje DOI svakog preprinta u listama preprinta, kao što su početna stranica servera i stranice odeljaka."
+
+#, fuzzy
+msgid "plugins.generic.doiInSummary.description.omp"
+msgstr "Prikazuje DOI svake knjige u listama knjiga, kao što su katalog, početna stranica izdavača i rezultati pretrage."

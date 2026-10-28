@@ -7,7 +7,7 @@ PKP community can use and improve it.
 ## Reporting issues
 
 - Open an issue describing the problem or suggestion.
-- Include your **OJS/OMP version**, the **plugin version** (see `version.xml`), and steps
+- Include your **OJS/OPS/OMP version**, the **plugin version** (see `version.xml`), and steps
   to reproduce. Errors from `error_log` / the browser console help a lot.
 
 ## Branch model
@@ -16,8 +16,8 @@ Each supported PKP version lives in its own branch, following the PKP convention
 
 | Branch | Target |
 |--------|--------|
-| `stable-3_5_0` | OJS/OMP 3.5.x |
-| `stable-3_4_0` | OJS/OMP 3.4.x |
+| `stable-3_5_0` | OJS, OPS and OMP 3.5.x |
+| `stable-3_4_0` | OJS 3.4.x |
 
 **Always base your work on — and open your pull request against — the branch that matches
 the PKP version you are targeting.**
@@ -54,7 +54,7 @@ comunidade PKP possa usar e evoluir.
 ### Modelo de branches
 
 Cada versão suportada do PKP fica em sua própria branch, seguindo a convenção da PKP:
-`stable-3_5_0` (OJS/OMP 3.5.x) e `stable-3_4_0` (OJS/OMP 3.4.x). **Baseie seu trabalho — e
+`stable-3_5_0` (OJS, OPS e OMP 3.5.x) e `stable-3_4_0` (OJS 3.4.x). **Baseie seu trabalho — e
 abra o pull request — na branch que corresponde à versão do PKP que você está mirando.**
 
 ### Pull requests

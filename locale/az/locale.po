@@ -15,3 +15,11 @@ msgstr "Xülasədə DOI"
 #, fuzzy
 msgid "plugins.generic.doiInSummary.description"
 msgstr "Məqalələrin DOI-sini nömrələrin xülasəsində və ana səhifədə göstərir."
+
+#, fuzzy
+msgid "plugins.generic.doiInSummary.description.ops"
+msgstr "Serverin ana səhifəsi və bölmə səhifələri kimi preprint siyahılarında hər preprintin DOI-sini göstərir."
+
+#, fuzzy
+msgid "plugins.generic.doiInSummary.description.omp"
+msgstr "Kataloq, nəşriyyatın ana səhifəsi və axtarış nəticələri kimi kitab siyahılarında hər kitabın DOI-sini göstərir."

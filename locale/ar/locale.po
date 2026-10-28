@@ -15,3 +15,11 @@ msgstr "معرّف DOI في الفهرس"
 #, fuzzy
 msgid "plugins.generic.doiInSummary.description"
 msgstr "يعرض معرّف DOI للمقالات في فهرس الأعداد وفي الصفحة الرئيسية."
+
+#, fuzzy
+msgid "plugins.generic.doiInSummary.description.ops"
+msgstr "يعرض معرّف DOI لكل نسخة أولية في قوائم النسخ الأولية، مثل الصفحة الرئيسية للخادم وصفحات الأقسام."
+
+#, fuzzy
+msgid "plugins.generic.doiInSummary.description.omp"
+msgstr "يعرض معرّف DOI لكل كتاب في قوائم الكتب، مثل الفهرس والصفحة الرئيسية للناشر ونتائج البحث."

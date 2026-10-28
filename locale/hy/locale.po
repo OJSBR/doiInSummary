@@ -15,3 +15,11 @@ msgstr "DOI-ն ամփոփումում"
 #, fuzzy
 msgid "plugins.generic.doiInSummary.description"
 msgstr "Ցուցադրում է հոդվածների DOI-ն համարների ամփոփման մեջ և գլխավոր էջում։"
+
+#, fuzzy
+msgid "plugins.generic.doiInSummary.description.ops"
+msgstr "Ցուցադրում է յուրաքանչյուր նախատպի DOI-ն նախատպերի ցանկերում, օրինակ՝ սերվերի գլխավոր էջում և բաժինների էջերում։"
+
+#, fuzzy
+msgid "plugins.generic.doiInSummary.description.omp"
+msgstr "Ցուցադրում է յուրաքանչյուր գրքի DOI-ն գրքերի ցանկերում, օրինակ՝ կատալոգում, հրատարակչության գլխավոր էջում և որոնման արդյունքներում։"

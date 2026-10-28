@@ -15,3 +15,11 @@ msgstr "DOI dalam ringkasan"
 #, fuzzy
 msgid "plugins.generic.doiInSummary.description"
 msgstr "Memaparkan DOI artikel dalam ringkasan terbitan dan di halaman utama."
+
+#, fuzzy
+msgid "plugins.generic.doiInSummary.description.ops"
+msgstr "Memaparkan DOI setiap pracetak dalam senarai pracetak, seperti halaman utama pelayan dan halaman bahagian."
+
+#, fuzzy
+msgid "plugins.generic.doiInSummary.description.omp"
+msgstr "Memaparkan DOI setiap buku dalam senarai buku, seperti katalog, halaman utama penerbit dan hasil carian."

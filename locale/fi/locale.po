@@ -15,3 +15,11 @@ msgstr "DOI sisällysluettelossa"
 #, fuzzy
 msgid "plugins.generic.doiInSummary.description"
 msgstr "Näyttää artikkelien DOI-tunnisteen numeroiden sisällysluettelossa ja etusivulla."
+
+#, fuzzy
+msgid "plugins.generic.doiInSummary.description.ops"
+msgstr "Näyttää kunkin preprintin DOI-tunnisteen preprint-luetteloissa, kuten palvelimen etusivulla ja osastojen sivuilla."
+
+#, fuzzy
+msgid "plugins.generic.doiInSummary.description.omp"
+msgstr "Näyttää kunkin kirjan DOI-tunnisteen kirjaluetteloissa, kuten luettelossa, kustantajan etusivulla ja hakutuloksissa."

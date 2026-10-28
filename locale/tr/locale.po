@@ -15,3 +15,11 @@ msgstr "Özette DOI"
 #, fuzzy
 msgid "plugins.generic.doiInSummary.description"
 msgstr "Makalelerin DOI'sini sayı özetinde ve ana sayfada gösterir."
+
+#, fuzzy
+msgid "plugins.generic.doiInSummary.description.ops"
+msgstr "Sunucunun ana sayfası ve bölüm sayfaları gibi ön baskı listelerinde her ön baskının DOI'sini gösterir."
+
+#, fuzzy
+msgid "plugins.generic.doiInSummary.description.omp"
+msgstr "Katalog, yayınevinin ana sayfası ve arama sonuçları gibi kitap listelerinde her kitabın DOI'sini gösterir."

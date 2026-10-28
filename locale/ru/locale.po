@@ -15,3 +15,11 @@ msgstr "DOI в оглавлении"
 #, fuzzy
 msgid "plugins.generic.doiInSummary.description"
 msgstr "Показывает DOI статей в оглавлении выпусков и на главной странице."
+
+#, fuzzy
+msgid "plugins.generic.doiInSummary.description.ops"
+msgstr "Показывает DOI каждого препринта в списках препринтов, например на главной странице сервера и на страницах разделов."
+
+#, fuzzy
+msgid "plugins.generic.doiInSummary.description.omp"
+msgstr "Показывает DOI каждой книги в списках книг, например в каталоге, на главной странице издательства и в результатах поиска."

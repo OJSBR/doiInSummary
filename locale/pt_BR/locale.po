@@ -13,3 +13,9 @@ msgstr "DOI no sumário"
 
 msgid "plugins.generic.doiInSummary.description"
 msgstr "Exibe o DOI dos artigos no sumário das edições e na página inicial."
+
+msgid "plugins.generic.doiInSummary.description.ops"
+msgstr "Exibe o DOI de cada preprint nas listas de preprints, como a página inicial do servidor e as páginas das seções."
+
+msgid "plugins.generic.doiInSummary.description.omp"
+msgstr "Exibe o DOI de cada livro nas listas de livros, como o catálogo, a página inicial da editora e os resultados da busca."

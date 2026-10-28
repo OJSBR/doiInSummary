@@ -15,3 +15,11 @@ msgstr "DOIa laburpenean"
 #, fuzzy
 msgid "plugins.generic.doiInSummary.description"
 msgstr "Artikuluen DOIa erakusten du zenbakien laburpenean eta hasierako orrian."
+
+#, fuzzy
+msgid "plugins.generic.doiInSummary.description.ops"
+msgstr "Preprint bakoitzaren DOIa erakusten du preprint zerrendetan, hala nola zerbitzariaren hasierako orrian eta atalen orrietan."
+
+#, fuzzy
+msgid "plugins.generic.doiInSummary.description.omp"
+msgstr "Liburu bakoitzaren DOIa erakusten du liburu zerrendetan, hala nola katalogoan, argitaletxearen hasierako orrian eta bilaketaren emaitzetan."

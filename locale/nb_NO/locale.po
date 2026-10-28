@@ -15,3 +15,11 @@ msgstr "DOI i oversikten"
 #, fuzzy
 msgid "plugins.generic.doiInSummary.description"
 msgstr "Viser DOI-en til artiklene i oversikten over utgaver og på forsiden."
+
+#, fuzzy
+msgid "plugins.generic.doiInSummary.description.ops"
+msgstr "Viser DOI for hvert preprint i listene over preprints, for eksempel på serverens forside og på seksjonssidene."
+
+#, fuzzy
+msgid "plugins.generic.doiInSummary.description.omp"
+msgstr "Viser DOI for hver bok i listene over bøker, for eksempel i katalogen, på forlagets forside og i søkeresultatene."

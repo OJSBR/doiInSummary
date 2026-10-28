@@ -15,3 +15,11 @@ msgstr "目录中的 DOI"
 #, fuzzy
 msgid "plugins.generic.doiInSummary.description"
 msgstr "在各期目录和首页中显示文章的 DOI。"
+
+#, fuzzy
+msgid "plugins.generic.doiInSummary.description.ops"
+msgstr "在预印本列表（如服务器首页和栏目页面）中显示每篇预印本的 DOI。"
+
+#, fuzzy
+msgid "plugins.generic.doiInSummary.description.omp"
+msgstr "在图书列表（如目录、出版社首页和搜索结果）中显示每本图书的 DOI。"

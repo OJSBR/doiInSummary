@@ -15,3 +15,11 @@ msgstr "DOI შინაარსში"
 #, fuzzy
 msgid "plugins.generic.doiInSummary.description"
 msgstr "აჩვენებს სტატიების DOI-ს ნომრების შინაარსსა და მთავარ გვერდზე."
+
+#, fuzzy
+msgid "plugins.generic.doiInSummary.description.ops"
+msgstr "აჩვენებს თითოეული პრეპრინტის DOI-ს პრეპრინტების სიებში, მაგალითად სერვერის მთავარ გვერდზე და განყოფილებების გვერდებზე."
+
+#, fuzzy
+msgid "plugins.generic.doiInSummary.description.omp"
+msgstr "აჩვენებს თითოეული წიგნის DOI-ს წიგნების სიებში, მაგალითად კატალოგში, გამომცემლობის მთავარ გვერდზე და ძიების შედეგებში."

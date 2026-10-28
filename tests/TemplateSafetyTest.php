@@ -55,7 +55,7 @@ class TemplateSafetyTest extends PKPTestCase
     public function testSourceHasTheStandardHeader(): void
     {
         $root = dirname(__DIR__);
-        $files = array_merge(glob($root . '/*.php'), glob($root . '/classes/*.php'), glob($root . '/classes/*/*.php'), glob(__DIR__ . '/*.php'), $this->templates(), glob($root . '/js/*.js'), glob($root . '/css/*.css'));
+        $files = array_merge(glob($root . '/*.php'), glob($root . '/classes/*.php'), glob($root . '/classes/*/*.php'), glob(__DIR__ . '/*.php'), $this->templates(), glob($root . '/js/*.js'), glob($root . '/styles/*.css'));
         foreach ($files as $file) {
             $source = (string) file_get_contents($file);
             $this->assertMatchesRegularExpression('/Copyright \(c\) (\d{4}-)?2026 OJSBR \(https:\/\/ojsbr\.com\)/', $source, basename($file) . ' lacks the header.');

@@ -18,7 +18,7 @@ use PKP\tests\PKPTestCase;
 
 class LocaleFilesTest extends PKPTestCase
 {
-    /** Locale codes shipped by the plugin, as OJS 3.5 names them. */
+    /** Locale codes shipped by the plugin, as OJS, OMP and OPS 3.5 name them. */
     public const LOCALES = [
         'ar', 'az', 'bg', 'ca', 'cs', 'da', 'de', 'el', 'en', 'es', 'eu',
         'fa', 'fi', 'fr', 'fr_CA', 'gl', 'hu', 'hy', 'id', 'it', 'ja', 'ka',
@@ -69,7 +69,8 @@ class LocaleFilesTest extends PKPTestCase
     {
         $files = $this->files();
         $master = array_keys($files[self::MASTER]->entries);
-        $this->assertCount(2, $master);
+        // The name, and the description of what OJS, OPS and OMP list.
+        $this->assertCount(4, $master);
 
         foreach ($files as $locale => $file) {
             $this->assertSame($master, array_keys($file->entries), "Keys of {$locale} differ from " . self::MASTER . '.');
@@ -158,7 +159,7 @@ class LocaleFilesTest extends PKPTestCase
     {
         foreach ($this->files() as $locale => $file) {
             foreach ($file->entries as $key => $value) {
-                if (str_ends_with($key, '.description') && substr_count($key, '.') <= 3) {
+                if (str_contains($key, '.description')) {
                     $this->assertStringNotContainsString('OJSBR', $value, "Credit in {$key} ({$locale}).");
                 }
             }

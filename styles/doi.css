@@ -9,3 +9,10 @@
 .doiInSummary {
     margin: 5px 0;
 }
+
+/* A book summary is a narrow card: the DOI takes the size of the authors next to it, and a
+   long DOI URL breaks instead of widening the card. */
+.obj_monograph_summary .doiInSummary {
+    font-size: 0.875em;
+    overflow-wrap: anywhere;
+}
