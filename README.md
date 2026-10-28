@@ -1,10 +1,10 @@
 # DOI in Summary — OJS plugin
 
 [![OJS](https://img.shields.io/badge/OJS-3.4%20%7C%203.5-brightgreen)](https://pkp.sfu.ca/ojs/)
-[![Version](https://img.shields.io/badge/version-3.5.0.6-blue)](version.xml)
+[![Version](https://img.shields.io/badge/version-3.4.0.4-blue)](version.xml)
 [![License](https://img.shields.io/badge/license-GPL--3.0-lightgrey)](LICENSE)
 
-**⬇️ Install package:** [OJS 3.5](https://github.com/OJSBR/doiInSummary/releases/download/3.5.0.6/doiInSummary-3.5.0.6.tar.gz) · [OJS 3.4](https://github.com/OJSBR/doiInSummary/releases/download/3.4.0.4/doiInSummary-3.4.0.4.tar.gz) — or browse all [Releases](../../releases).
+**⬇️ Install package:** [OJS, OPS and OMP 3.5](https://github.com/OJSBR/doiInSummary/releases/download/3.5.1.0/doiInSummary-3.5.1.0.tar.gz) · [OJS 3.4](https://github.com/OJSBR/doiInSummary/releases/download/3.4.0.4/doiInSummary-3.4.0.4.tar.gz) — or browse all [Releases](../../releases).
 
 > **This is the `stable-3_4_0` branch (OJS 3.4).** For OJS 3.5 use the
 > [`stable-3_5_0`](../../tree/stable-3_5_0) branch.
@@ -19,12 +19,12 @@ journal home page.
 
 ## Compatibility & branches
 
-| OJS version | Branch | Plugin release |
+| Application | Branch | Plugin release |
 |-------------|--------|----------------|
-| OJS 3.5.x   | [`stable-3_5_0`](../../tree/stable-3_5_0) *(default)* | 3.5.0.6 |
+| OJS, OPS and OMP 3.5.x | [`stable-3_5_0`](../../tree/stable-3_5_0) *(default)* | 3.5.1.0 |
 | OJS 3.4.x   | [`stable-3_4_0`](../../tree/stable-3_4_0) | 3.4.0.4 |
 
-Both branches ship the same code; the locale folders follow each OJS line (38 languages).
+The 3.5 branch also covers OPS and OMP (see its README); this 3.4 branch is for OJS only. The locale folders follow each PKP line (38 languages).
 
 ## Installation
 
@@ -106,10 +106,12 @@ Depois ative o **DOI in summary** na lista de plugins *Genéricos*.
 
 ### Compatibilidade e branches
 
-| Versão do OJS | Branch | Release do plugin |
-|---------------|--------|-------------------|
-| OJS 3.5.x     | [`stable-3_5_0`](../../tree/stable-3_5_0) *(padrão)* | 3.5.0.6 |
+| Aplicação | Branch | Release do plugin |
+|-----------|--------|-------------------|
+| OJS, OPS e OMP 3.5.x | [`stable-3_5_0`](../../tree/stable-3_5_0) *(padrão)* | 3.5.1.0 |
 | OJS 3.4.x     | [`stable-3_4_0`](../../tree/stable-3_4_0) | 3.4.0.4 |
+
+A branch 3.5 também atende OPS e OMP (veja o README dela); esta branch 3.4 é só para OJS.
 
 ### Testes
 
